@@ -1,2 +1,4 @@
 .elixir_ls
 .DS_Store
+.clj-kondo
+.lsp
