@@ -23,7 +23,7 @@ float age(planet_t planet, int64_t seconds) {
   case NEPTUNE:
     return aux(seconds / 31557600 / 164.79132);
   }
-  return 0;
+  return -1.0;
 }
 
 float aux(float t) { return round(t * 100) / 100; }
