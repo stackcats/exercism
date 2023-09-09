@@ -27,6 +27,8 @@ int score(String s) {
     'q': 10,
     'z': 10
   };
-  return s.runes
+  return s
+      .toLowerCase()
+      .runes
       .fold(0, (acc, rune) => acc + (values[String.fromCharCode(rune)] ?? 0));
 }

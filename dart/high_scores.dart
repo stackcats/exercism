@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class HighScores {
   final List<int> scores;
   List<int> sorted;
@@ -18,6 +20,6 @@ class HighScores {
   }
 
   List<int> personalTopThree() {
-    return sorted.sublist(0, 3);
+    return sorted.sublist(0, min(3, sorted.length));
   }
 }
