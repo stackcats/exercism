@@ -173,24 +173,16 @@ static int ha[5][5] = {{-1, -1, -1, -1, -1},
                        {-1, -1, -1, -1, -1},
                        {-1, -1, -1, -1, -1}};
 
-const char *drinks_water(void) {
+solution_t solve_puzzle(void) {
   bruteFill(ha, 0, 0);
-
+  solution_t sol;
   for (int i = 0; i < 5; i++) {
     if (ha[i][D] == water) {
-      return nationality[ha[i][M]];
+      sol.drinks_water = nationality[ha[i][M]];
     }
-  }
-  return "unreachable";
-}
-
-const char *owns_zebra(void) {
-  bruteFill(ha, 0, 0);
-
-  for (int i = 0; i < 5; i++) {
     if (ha[i][A] == zebra) {
-      return nationality[ha[i][M]];
+      sol.owns_zebra = nationality[ha[i][M]];
     }
   }
-  return "unreachable";
+  return sol;
 }
