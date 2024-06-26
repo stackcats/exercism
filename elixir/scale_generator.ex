@@ -102,7 +102,6 @@ defmodule ScaleGenerator do
   indicates you will start with C, make a full step over C# to D, another over
   D# to E, then a semitone, stepping from E to F (again, E has no sharp). You
   can follow the rest of the pattern to get:
-  ~w(C C# D D# E F F# G G# A A# B C)
   C D E F G A B C
   """
   @spec scale(tonic :: String.t(), pattern :: String.t()) :: list(String.t())
