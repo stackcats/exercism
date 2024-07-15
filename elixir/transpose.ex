@@ -22,9 +22,7 @@ defmodule Transpose do
 
   def transpose(input) do
     lst = String.split(input, "\n")
-    longest = Enum.max_by(lst, &String.length/1)
-    len = String.length(longest)
-    ndx = Enum.find_index(lst, &(&1 == longest))
+    len = Enum.max_by(lst, &String.length/1) |> String.length()
 
     lst
     |> Enum.map(fn s ->
@@ -47,3 +45,4 @@ defmodule Transpose do
     |> Enum.join("\n")
   end
 end
+
